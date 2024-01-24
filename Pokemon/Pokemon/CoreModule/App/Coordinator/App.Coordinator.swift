@@ -13,17 +13,13 @@ extension App {
     final class Coordinator {
 
         private let factory: AppCoordinatorFactoryProtocol
-        private let rootNavController: UINavigationController
         private var pokemonCoordinator: PokemonCoordinatorProtocol?
 
         /// Инициализация
         /// - Parameters:
         ///   - factory: Фабрика координаторов сценариев
-        ///   - rootNavController: Рутовый контроллер прилоежиня
-        init(factory: AppCoordinatorFactoryProtocol,
-             rootNavController: UINavigationController) {
+        init(factory: AppCoordinatorFactoryProtocol) {
             self.factory = factory
-            self.rootNavController = rootNavController
         }
     }
 }

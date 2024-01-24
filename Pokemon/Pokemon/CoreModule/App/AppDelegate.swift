@@ -19,9 +19,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let rootViewController = UINavigationController()
         window?.rootViewController = rootViewController
         window?.makeKeyAndVisible()
-        let factory = App.CoordinatorFactory(navController: rootViewController)
-        applicationCoordinator = App.Coordinator(factory: factory,
-                                                 rootNavController: rootViewController)
+        let factory = App.CoordinatorFactory()
+        applicationCoordinator = App.Coordinator(factory: factory)
         applicationCoordinator?.startApplication()
 
         return true
